@@ -1,0 +1,1177 @@
+body {
+    margin:0;
+}
+h1 {
+    text-align:center;
+    background:forestgreen;
+    color:white;
+    margin:0;
+    padding:0.5rem;
+}
+h2 {
+    margin:0;
+    padding:0.25rem 0.05rem;
+    border-left:double 0.5rem forestgreen;
+    
+}
+
+.ui_area {
+    margin:1rem;
+    padding:0.5rem 1rem;
+    border:solid 2px gray;
+}
+.ui_area_row {
+    display:flex;
+    width:100%;
+    align-items:center;
+    margin:0.25rem;
+    flex-wrap:wrap;
+}
+.ui_explain_area {
+    width:80%;
+}
+.ui_demo_area {
+    display:flex;
+    width:20%;
+    justify-content:flex-end;
+}
+
+
+@media (max-width:768px){
+    .ui_explain_area {
+        width:100%;
+    }
+    .ui_demo_area{
+        width:100%;
+    }
+
+}
+
+
+
+/* framework_area*/
+
+/* 
+ * 20 UI set(NOT USE JS)
+ * 
+ * Auther:Seiya Asahina
+ * Version:1.0
+ * Last update: 2020-07-05
+ *
+ */
+
+
+/* ios button */
+.ui20-input_chk {
+    display:none;
+}
+.ui20-ios_conf {
+    display:inline-block;
+    position:relative;
+    padding:1rem 2rem;
+    margin:0.25rem;
+    border-radius:1rem;
+    background:darkgray;
+    transition:0.2s;
+    cursor:pointer;
+}
+.ui20-ios_conf:before {
+    content:"";
+    position:absolute;
+    top:-1px;
+    left:0;
+    width:50%;
+    height:100%;
+    border:1px solid gray;
+    border-radius:1rem;
+    background:white;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_conf{ background:lime; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_conf:before{ left:50%; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_navy { background:navy; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_orange { background:orange; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_crimson { background:crimson; }
+
+/* ios button 3d */
+.ui20-input_chk {
+    display:none;
+}
+.ui20-ios_3dconf {
+    display:inline-block;
+    position:relative;
+    width:4rem;
+    height:2rem;
+    margin:0.25rem;
+    border-radius:1rem;
+    background:darkgray;
+    transition:0.2s;
+    cursor:pointer;
+    box-shadow:0 4px 4px -2px #333 inset;
+}
+.ui20-ios_3dconf:before {
+    content:"";
+    position:absolute;
+    top:-1px;
+    left:0;
+    width:50%;
+    height:100%;
+    border:1px solid gray;
+    border-radius:1rem;
+    background:white;
+    transition:0.2s;
+    box-shadow:4px 0 2px -2px #333;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_3dconf{ background:lime; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_3dconf:before{ left:50%; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_navy { background:navy; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_orange { background:orange; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ios_crimson { background:crimson; }
+
+
+/* android button */
+.ui20-and_conf {
+    display:inline-block;
+    position:relative;
+    width:6rem;
+    height:2rem;
+    margin:0.25rem;
+    background:#444;
+    transition:0.2s;
+    cursor:pointer;
+}
+.ui20-and_conf:before {
+    content:"OFF";
+    font-weight:bold;
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    background:dimgray;
+    transition:0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_conf:before{
+    content:"ON";
+    font-weight:bold;
+    left:50%;
+    background:deepskyblue;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_green:before { background:green; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_orange:before { background:orange; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_crimson:before { background:crimson; }
+
+
+/* android button 3d */
+.ui20-and_3dconf {
+    display:inline-block;
+    position:relative;
+    width:6rem;
+    height:2rem;
+    margin:0.25rem;
+    background:#444;
+    transition:0.2s;
+    cursor:pointer;
+    box-shadow:4px 0 4px -2px #000 inset, 0 4px 4px -2px #000 inset;
+}
+.ui20-and_3dconf:before {
+    content:"OFF";
+    font-weight:bold;
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    background:dimgray;
+    transition:0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:4px 0 2px -2px #000;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_3dconf:before{
+    content:"ON";
+    font-weight:bold;
+    left:50%;
+    background:deepskyblue;
+    box-shadow:none;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_green:before { background:green; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_orange:before { background:orange; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-and_crimson:before { background:crimson; }
+
+
+
+
+
+
+
+
+/* triple select concave */
+.ui20-concave_radio {
+    display:none;
+}
+.ui20-concave_label {
+    display:inline-block;
+    font-weight:bold;
+    padding:0.5rem 1rem;
+    border:solid 2px deepskyblue;
+    border-radius:0.25rem;
+    background:white;
+    cursor:pointer;
+    margin:0 0.25rem;
+    transition:0.2s;
+}
+input[type="radio"].ui20-concave_radio:checked + label.ui20-concave_label { 
+    background:deepskyblue;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08), 0px 4px 10px -6px #000 inset;
+}
+.ui20-concave_green { border:solid 2px forestgreen; }
+.ui20-concave_orange { border:solid 2px orange; }
+.ui20-concave_crimson { border:solid 2px crimson; }
+
+input[type="radio"].ui20-concave_radio:checked + label.ui20-concave_green     { transition:0.2s;background:forestgreen; }
+input[type="radio"].ui20-concave_radio:checked + label.ui20-concave_orange    { transition:0.2s;background:orange; }
+input[type="radio"].ui20-concave_radio:checked + label.ui20-concave_crimson   { transition:0.2s;background:crimson; }
+
+
+
+
+/* triple select flat */
+.ui20-flat_radio {
+    display:none;
+}
+.ui20-flat_label {
+    display:inline-block;
+    font-weight:bold;
+    padding:0.5rem 1rem;
+    border:solid 2px deepskyblue;
+    border-radius:0.25rem;
+    background:white;
+    cursor:pointer;
+    margin:0 0.25rem;
+    transition:0.2s;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08) , 0px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+input[type="radio"].ui20-flat_radio:checked + label.ui20-flat_label { 
+    background:deepskyblue;
+    box-shadow:none;
+}
+.ui20-flat_green { border:solid 2px forestgreen; }
+.ui20-flat_orange { border:solid 2px orange; }
+.ui20-flat_crimson { border:solid 2px crimson; }
+
+input[type="radio"].ui20-flat_radio:checked + label.ui20-flat_green     { transition:0.2s;background:forestgreen; }
+input[type="radio"].ui20-flat_radio:checked + label.ui20-flat_orange    { transition:0.2s;background:orange; }
+input[type="radio"].ui20-flat_radio:checked + label.ui20-flat_crimson   { transition:0.2s;background:crimson; }
+
+
+/* rotate switch */
+.ui20-rotate_switch_base {
+    display:inline-block;
+    width:8rem;
+    height:8rem;
+
+    background:rgba(50, 205, 50, 0.2);
+    background:forestgreen;
+    border:solid 2px #000;
+    border-radius:0.25rem;
+    position:relative;
+    box-shadow:0px 4px 4px 2px gray;
+    font-weight:bold;
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+}
+.ui20-rotate_switch_base:before {
+    content:"切";
+    position:absolute;
+    left:calc(50% - 0.5rem);
+}
+.ui20-rotate_switch_base:after {
+    content:"入";
+    position:absolute;
+    right:0.5rem;
+}
+.ui20-rotate_switch_input {
+    display:none;
+}
+.ui20-rotate_switch {
+    display:inline-block;
+    border:solid 1px gray;
+    background:black;
+    border-radius:4rem;
+    width:4rem;
+    height:4rem;
+    transition:0.2s;
+    cursor:pointer;
+    position:absolute;
+    top:2rem;
+    left:2rem;
+}
+/*  switch's shadow */
+.ui20-rotate_switch:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    display:inline-block;
+    border-radius:4rem;
+    width:4rem;
+    height:4rem;
+    box-shadow:0 4px 4px #000;
+    transition:0.2s;
+}
+.ui20-rotate_switch:before {
+    content:"";
+    position:absolute;
+
+    height:4rem;
+    width:0.25rem;
+    background:white;
+
+    top:0;
+    /* 回しの半径 - つまみのwidth/2 */
+    left:calc(2rem - (0.25rem/2));
+}
+input[type="checkbox"].ui20-rotate_switch_input:checked + label.ui20-rotate_switch {
+    transition:0.2s;
+    transform:rotate(45deg);
+}
+input[type="checkbox"].ui20-rotate_switch_input:checked + label.ui20-rotate_switch:after {
+    transition:0.2s;
+    transform:rotate(-45deg);
+}
+.ui20-rotate_switch_darkred { background:darkred; }
+.ui20-rotate_switch_indigo  { background:indigo; }
+.ui20-rotate_switch_saddlebrown { background:saddlebrown; }
+
+
+
+/* rotate switch 90 */
+.ui20-rotate_switch_base_90 {
+    display:inline-block;
+    width:8rem;
+    height:8rem;
+
+    background:rgba(50, 205, 50, 0.2);
+    background:forestgreen;
+    border:solid 2px #000;
+    border-radius:0.25rem;
+    position:relative;
+    box-shadow:0px 4px 4px 2px gray;
+    font-weight:bold;
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+}
+.ui20-rotate_switch_base_90:before {
+    content:"入";
+    position:absolute;
+    left:calc(50% - 0.5rem);
+}
+.ui20-rotate_switch_base_90:after {
+    content:"切";
+    position:absolute;
+    top:calc(50% - 0.5rem);
+    left:0.25rem;
+}
+.ui20-rotate_switch_input_90 {
+    display:none;
+}
+.ui20-rotate_switch_90 {
+    display:inline-block;
+    border:solid 1px gray;
+    background:black;
+    border-radius:4rem;
+    width:4rem;
+    height:4rem;
+    transition:0.3s;
+    cursor:pointer;
+    position:absolute;
+    top:2rem;
+    left:2rem;
+}
+/*  switch's shadow */
+.ui20-rotate_switch_90:after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    display:inline-block;
+    border-radius:4rem;
+    width:4rem;
+    height:4rem;
+    box-shadow:0 4px 4px #000;
+    transition:0.3s;
+}
+.ui20-rotate_switch_90:before {
+    content:"";
+    position:absolute;
+
+    width:4rem;
+    height:0.25rem;
+    background:white;
+
+    top:calc(2rem - (0.25rem/2));
+    /* 回しの半径 - つまみのwidth/2 */
+    left:0;
+}
+input[type="checkbox"].ui20-rotate_switch_input_90:checked + label.ui20-rotate_switch_90 {
+    transition:0.3s;
+    transform:rotate(90deg);
+}
+input[type="checkbox"].ui20-rotate_switch_input_90:checked + label.ui20-rotate_switch_90:after {
+    transition:0.3s;
+    transform:rotate(-90deg);
+}
+.ui20-rotate_switch_90_darkred { background:darkred; }
+.ui20-rotate_switch_90_indigo  { background:indigo; }
+.ui20-rotate_switch_90_saddlebrown { background:saddlebrown; }
+
+
+/* simple toggle */
+.ui20-simple_toggle {
+    display:inline-block;
+    position:relative;
+    width:4rem;
+    height:1.5rem;
+    border-radius:2rem;
+    margin:0.25rem;
+    cursor:pointer;
+
+    border:solid 0.25rem black;
+    background:white;
+    transition:0.2s;
+}
+.ui20-simple_toggle:before {
+    content:"";
+    position:absolute;
+    top:0.25rem;
+    left:0.5rem;
+    
+    width:1rem;
+    height:1rem;
+    border-radius:2rem;
+    background:black;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle {
+    background:deepskyblue;
+    border-color:deepskyblue;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle:before{
+    top:0.25rem;
+    left:calc(100% - 1.5rem );
+    background:white;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_green {
+    background:forestgreen;
+    border-color:forestgreen;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_orange {
+    background:orange;
+    border-color:orange;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_crimson {
+    background:crimson;
+    border-color:crimson;
+}
+
+/* simple toggle vertical */
+.ui20-simple_toggle_ver {
+    display:inline-block;
+    position:relative;
+    height:4rem;
+    width:1.5rem;
+    border-radius:2rem;
+    margin:0.25rem;
+    cursor:pointer;
+
+    border:solid 0.25rem black;
+    background:white;
+    transition:0.2s;
+}
+.ui20-simple_toggle_ver:before {
+    content:"";
+    position:absolute;
+    left:0.25rem;
+    top:calc(100% - 1.5rem );
+    
+    width:1rem;
+    height:1rem;
+    border-radius:2rem;
+    background:black;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_ver {
+    background:deepskyblue;
+    border-color:deepskyblue;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_ver:before{
+    top:0.5rem;
+    left:0.25rem;
+    background:white;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_ver_green {
+    background:forestgreen;
+    border-color:forestgreen;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_ver_orange {
+    background:orange;
+    border-color:orange;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-simple_toggle_ver_crimson {
+    background:crimson;
+    border-color:crimson;
+}
+
+
+
+/* android button */
+.ui20-jpn_style_toggle_base {
+    
+    display:inline-block;
+    position:relative;
+    background:cornsilk;
+    border-radius:0.5rem;
+    width:8rem;
+    height:8rem;
+    box-shadow:2px 2px 2px 2px #333;
+    margin:0.25rem;
+}
+.ui20-jpn_style_toggle_base:before {
+    content:"切";
+    font-weight:bold;
+    position:absolute;
+    top:calc(50% - 3rem);
+    left:calc(50% - 2rem);
+
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+}
+
+.ui20-jpn_style_toggle_base:after {
+    content:"入";
+    font-weight:bold;
+    position:absolute;
+    top:calc(50% - 3rem);
+    right:calc(50% - 2rem);
+
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+}
+
+.ui20-jpn_style_toggle {
+    display:inline-block;
+   
+    width:6rem;
+    height:2rem;
+
+
+    position:absolute;
+    top:calc( (100% - 2rem)/2 );
+    left:calc( (100% - 6rem)/2 );
+
+    background:#444;
+    transition:0.2s;
+    cursor:pointer;
+    box-shadow:4px 0 4px -2px #000 inset, 0 4px 4px -2px #000 inset;
+}
+.ui20-jpn_style_toggle:before {
+    content:"";
+    font-weight:bold;
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    background:dimgray;
+    transition:0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:4px 0 2px -2px #000;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-jpn_style_toggle:before{
+    content:"";
+    font-weight:bold;
+    left:50%;
+    box-shadow:-4px 0 2px -2px #000;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-jpn_style_toggle{
+    background:orange;
+}
+.ui20-jpn_style_toggle_green { background:forestgreen; }
+.ui20-jpn_style_toggle_darkred { background:darkred; }
+.ui20-jpn_style_toggle_saddlebrown { background:saddlebrown; }
+
+
+/* pull lever */
+.ui20-pull_lever_base {
+    position:relative;
+    width:10rem;
+    height:5rem;
+    background:gray;
+    margin:0.5rem;
+    border-radius:0.25rem;
+    box-shadow:1px 1px 2px 2px #000;
+}
+.ui20-pull_lever_base:before {
+    content:"切";
+    position:absolute;
+    right:0.5rem;
+    top:0.5rem;
+
+    font-weight:bold;
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+
+}
+.ui20-pull_lever_base:after {
+    content:"入";
+    position:absolute;
+    right:0.5rem;
+    bottom:0.5rem;
+    font-weight:bold;
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+}
+.ui20-pull_lever {
+    position:absolute;
+    width:2rem;
+    height:2rem;
+    border-radius:2rem;
+    top:0.5rem;
+    left:0.5rem;
+
+    background:dimgray;
+
+    cursor:pointer;
+    box-shadow:1px 1px 2px 2px #000;
+}
+.ui20-pull_lever:before {
+    content:"";
+    position:absolute;
+    top:0.5rem;
+    left:0.5rem;
+    border-radius:1rem  0.5rem 0.5rem 1rem ;
+    width:7rem;
+    height:1rem;
+    background:silver;
+    box-shadow:0px 2px 2px 2px #000;
+    transform-origin:0.5rem 0.5rem;
+    transition:0.25s;
+}
+.ui20-pull_lever:after {
+    content:"";
+    position:absolute;
+
+    top:0.5rem;
+    left:2rem;
+    width:4.5rem;
+    height:1rem;
+    background:navy;
+    transform-origin:-1.0rem 0.5rem;
+    transition:0.25s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pull_lever:before{
+    box-shadow:1px 1px 1px 2px #000;
+    transform-origin:0.5rem 0.5rem;
+    transform:rotate(20deg);
+    transition:0.25s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pull_lever:after{
+    transform-origin:-1.0rem 0.5rem;
+    transform:rotate(20deg);
+    transition:0.25s;
+}
+.ui20-pull_lever_crimson:after {
+    background:crimson;
+}
+.ui20-pull_lever_green:after {
+    background:forestgreen;
+}
+.ui20-pull_lever_orange:after {
+    background:orange;
+}
+
+
+
+/* push lever */
+.ui20-push_lever_base {
+    position:relative;
+    width:10rem;
+    height:5rem;
+    background:gray;
+    margin:0.5rem;
+    border-radius:0.25rem;
+    box-shadow:1px 1px 2px 2px #000;
+}
+.ui20-push_lever_base:before {
+    content:"入";
+    position:absolute;
+    right:0.5rem;
+    top:0.5rem;
+
+    font-weight:bold;
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+
+}
+.ui20-push_lever_base:after {
+    content:"切";
+    position:absolute;
+    right:0.5rem;
+    bottom:0.5rem;
+    font-weight:bold;
+    text-shadow:
+        white 2px 0px,  white -2px 0px,
+        white 0px -2px, white 0px 2px,
+        white 2px 2px , white -2px 2px,
+        white 2px -2px, white -2px -2px,
+        white 1px 2px,  white -1px 2px,
+        white 1px -2px, white -1px -2px,
+        white 2px 1px,  white -2px 1px,
+        white 2px -1px, white -2px -1px;
+}
+.ui20-push_lever {
+    position:absolute;
+    width:2rem;
+    height:2rem;
+    border-radius:2rem;
+    bottom:0.5rem;
+    left:0.5rem;
+
+    background:dimgray;
+
+    cursor:pointer;
+    box-shadow:1px 1px 2px 2px #000;
+}
+.ui20-push_lever:before {
+    content:"";
+    position:absolute;
+    bottom:0.5rem;
+    left:0.5rem;
+    border-radius:1rem  0.5rem 0.5rem 1rem ;
+    width:7rem;
+    height:1rem;
+    background:silver;
+    box-shadow:0px 2px 2px 2px #000;
+    transform-origin:0.5rem 0.5rem;
+    transition:0.25s;
+}
+.ui20-push_lever:after {
+    content:"";
+    position:absolute;
+
+    bottom:0.5rem;
+    left:2rem;
+    width:4.5rem;
+    height:1rem;
+    background:navy;
+    transform-origin:-1.0rem 0.5rem;
+    transition:0.25s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-push_lever:before{
+    box-shadow:0px 3px 2px 2px #000;
+    transform-origin:0.5rem 0.5rem;
+    transform:rotate(-20deg);
+    transition:0.25s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-push_lever:after{
+    transform-origin:-1.0rem 0.5rem;
+    transform:rotate(-20deg);
+    transition:0.25s;
+}
+.ui20-push_lever_crimson:after {
+    background:crimson;
+}
+.ui20-push_lever_green:after {
+    background:forestgreen;
+}
+.ui20-push_lever_orange:after {
+    background:orange;
+}
+
+
+/* pc button */
+.ui20-pc_button {
+    position:relative;
+    width:4rem;
+    height:4rem;
+    border-radius:2.5rem;
+    border:solid 0.4rem silver;
+    background:#444;
+    cursor:pointer;
+}
+.ui20-pc_button:before {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:2rem;
+    height:2rem;
+    border-radius:1.5rem;
+    border:solid 0.25rem gray;
+    transition:0.25s;
+}
+.ui20-pc_button:after {
+
+    content:"";
+    position:absolute;
+    top:calc(50% - 1rem);
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:0.25rem;
+    height:1.25rem;
+    background:gray;
+    border-radius:1.5rem;
+    border:solid 0.25rem #444;
+    
+    transition:0.25s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button:before{
+    border-color:lime;
+    box-shadow: 0px 0px 0.3rem lime ,0px 0px 0.3rem lime inset;
+    transition:0.25s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button:after{
+    background:lime;
+    transition:0.25s;
+}
+
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button_yellow:after { background:yellow; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button_yellow:before{
+    border-color:yellow;
+    box-shadow: 0px 0px 0.3rem yellow ,0px 0px 0.3rem yellow inset;
+}
+
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button_magenta:after { background:magenta; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button_magenta:before{
+    border-color:magenta;
+    box-shadow: 0px 0px 0.3rem magenta ,0px 0px 0.3rem magenta inset;
+}
+
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button_cyan:after { background:cyan; }
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-pc_button_cyan:before{ 
+    border-color:cyan;
+    box-shadow: 0px 0px 0.3rem cyan ,0px 0px 0.3rem cyan inset;
+}
+
+/* light switch */
+.ui20-light_switch_base {
+    background:lightgray;
+    width:7rem;
+    height:10rem;
+    border-radius:0.5rem;
+    margin:0.25rem;
+}
+.ui20-light_switch {
+    position:relative;
+    display:block;
+    width:6rem;
+    height:9rem;
+    background:white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    cursor:pointer;
+    border-radius:0.25rem;
+    border:solid 0.1rem black;
+    box-shadow:1px -0.5px 2px black;
+    transition:0.1s;
+}
+.ui20-light_switch:before {
+    content:"";
+    position:absolute;
+    width:1rem;
+    height:0.5rem;
+
+    background:lime;
+    box-shadow: 0px 0px 0.3rem lime ,0px 0px 0.3rem lime inset;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:calc(50% - 1.5rem);
+    transition:0.1s;
+}
+.ui20-light_switch:after {
+    content:"";
+    position:absolute;
+    width:3rem;
+    height:8rem;
+    background:dimgray;
+    background:repeating-linear-gradient( to bottom, white,white 2px,gray 0,gray 4px);
+
+    left:calc(50% - 0.1rem);
+    top:0.5rem;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-light_switch{
+    transition:0.1s;
+    box-shadow:none;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-light_switch:before{
+    background:gray;
+    box-shadow:none;
+    transition:0.1s;
+}
+.ui20-light_switch_cyan:before {
+    background:cyan;
+    box-shadow: 0px 0px 0.3rem cyan ,0px 0px 0.3rem cyan inset;
+}
+.ui20-light_switch_magenta:before {
+    background:magenta;
+    box-shadow: 0px 0px 0.3rem magenta ,0px 0px 0.3rem magenta inset;
+}
+.ui20-light_switch_yellow:before {
+    background:yellow;
+    box-shadow: 0px 0px 0.3rem yellow ,0px 0px 0.3rem yellow inset;
+}
+
+
+/* light switch double */
+.ui20-double_top {
+    height:4.5rem;
+    top:calc(50% - 2.25rem);
+    border-radius:0.25rem 0.25rem 0 0;
+}
+.ui20-double_top:after {
+    height:4rem;
+    top:0.25rem;
+}
+.ui20-double_bottom {
+    height:4.5rem;
+    top:calc(50% - 2.25rem);
+    border-radius:0 0 0.25rem 0.25rem ;
+}
+.ui20-double_bottom:after {
+    height:4rem;
+    top:0.25rem;
+}
+
+/* light switch triple */
+.ui20-triple_top {
+    height:3rem;
+    top:calc(33% - 1.45rem);
+    border-radius:0.25rem 0.25rem 0 0;
+}
+.ui20-triple_top:after {
+    height:calc(8rem/3);
+    top:0.125rem;
+}
+.ui20-triple_middle {
+    height:3rem;
+    top:calc(33% - 1.45rem);
+    border-radius:0;
+}
+.ui20-triple_middle:after {
+    height:calc(8rem /3);
+    top:0.125rem;
+}
+.ui20-triple_bottom {
+    height:3rem;
+    top:calc(33% - 1.45rem);
+    border-radius:0 0 0.25rem 0.25rem ;
+}
+.ui20-triple_bottom:after {
+    height:calc(8rem /3);
+    top:0.125rem;
+}
+
+
+
+
+
+
+/* light string */
+.ui20-light_string {
+    position:relative;
+    display:inline-block;
+    width:4rem;
+    height:10rem;
+
+    border:solid 1px black;
+    cursor:pointer;
+}
+.ui20-light_string:before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,0%);
+    width:0.1rem;
+    height:6rem;
+    background:black;
+
+    transition:0.2s;
+}
+.ui20-light_string:after {
+    content:"";
+    position:absolute;
+    top:6rem;
+    left:50%;
+    transform: translate(-50%,0%);
+
+    width:1.5rem;
+    height:1.5rem;
+    border-radius:1.5rem;
+    background:forestgreen;
+    border:solid 0.1rem black;
+    
+    transition:0.2s;
+}
+
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-light_string:before{
+    height:7rem;
+    transition:0.2s;
+}
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-light_string:after{
+    top:7rem;
+    transition:0.2s;
+}
+
+.ui20-light_string_orange:after { background:orange; }
+.ui20-light_string_navy:after { background:navy; }
+.ui20-light_string_crimson:after { background:crimson; }
+
+
+
+
+
+/* elevetor square button */
+
+.ui20-ev_square {
+    display:inline-block;
+    width:5rem;
+    height:5rem;
+    margin:0.25rem;
+    border:solid 0.5rem silver;
+    border-radius:0.25rem;
+    color:silver;
+    background:#333;
+    position:relative;
+    cursor:pointer;
+
+}
+.ui20-ev_square:before {
+    content:"0";
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size:3rem;
+    font-weight:bold;
+    transform:translate(-50%,-50%);
+    transition:0.25s;
+}
+
+
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ev_square:before{
+    color:orange;
+    text-shadow:0 0 6px orange;
+    transition:0.25s;
+}
+
+
+
+/* elevetor circle button */
+
+.ui20-ev_circle {
+    display:inline-block;
+    width:5rem;
+    height:5rem;
+    margin:0.25rem;
+    border:solid 0.4rem silver;
+    border-radius:5rem;
+    color:silver;
+    background:#333;
+    position:relative;
+    cursor:pointer;
+
+}
+.ui20-ev_circle:before {
+    content:"0";
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size:3rem;
+    font-weight:bold;
+    transform:translate(-50%,-50%);
+    transition:0.25s;
+}
+
+input[type="checkbox"].ui20-input_chk:checked + label.ui20-ev_circle:before{
+    color:orange;
+    text-shadow:0 0 6px orange;
+    transition:0.25s;
+}
+
+.ui20_ev_1:before { content:"1"; }
+.ui20_ev_2:before { content:"2"; }
+.ui20_ev_3:before { content:"3"; }
+.ui20_ev_4:before { content:"4"; }
+.ui20_ev_5:before { content:"5"; }
+.ui20_ev_6:before { content:"6"; }
+.ui20_ev_7:before { content:"7"; }
+.ui20_ev_8:before { content:"8"; }
+.ui20_ev_9:before { content:"9"; }
+
+
+
